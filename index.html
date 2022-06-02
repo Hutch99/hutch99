@@ -1,9 +1,135 @@
-<html>
+<!DOCTYPE HTML>
+<!-- comment-->
+<HTML lang="en">
+<head>
+  <title>Javascript Practice Pages</title>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="this is what is in the document for search engines and stuff, limited to 200 chars"/>
+  <meta name="keywords" content="html5 canvas, html5 tutorial, html5 tags limited to 1000 chars"/>
+  <meta name="robots" content="index,follow"/> <!--or noindex,noarchive,nofollow-->
+  <script src="./assets/js/global.js"></script> 
+	<noscript><h1>This page requires javascript</h1></noscript>
+  <link rel="stylesheet" href="./assets/css/BingoCard.css">
+  <link rel="stylesheet" href="./assets/css/rollover.css">
+  <!-- <base href="/assets/"> The <base> tag specifies the base URL/target for all relative URLs in a document. -->
+    <style type="text/css">
+	     #cwc{
+	     }
+	     #cwc1{
+	     } 
+  </style>
+  <link rel="icon" href="./assets/img/favicon.ico">
+  <title>HTML5 Learning</title>
+</head>
+
  
 <body>
-  <h1>Brian Hutchinson</h1>
-  <p>Welcome to my website!</p>
+  <h1>Welcome!</h1>
+  <h2>Testing and learning here!</h2>
+  <p>Welcome to my <strong>TEST</strong> website!</p>
   <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+  <hr>
+  <h2>Create a Random Bingo Card</h2>
+    <table width="400" border="1">
+      <tbody>
+        <tr>
+          <th scope="col">B</th>
+          <th scope="col">I</th>
+          <th scope="col">N</th>
+          <th scope="col">G</th>
+          <th scope="col">O</th>
+        </tr>
+        <tr>
+          <td id="square0">&nbsp;</td>
+          <td id="square5">&nbsp;</td>
+          <td id="square10">&nbsp;</td>
+          <td id="square14">&nbsp;</td>
+          <td id="square19">&nbsp;</td>
+        </tr>
+        <tr>
+          <td id="square1">&nbsp;</td>
+          <td id="square6">&nbsp;</td>
+          <td id="square11">&nbsp;</td>
+          <td id="square15">&nbsp;</td>
+          <td id="square20">&nbsp;</td>
+        </tr>
+        <tr>
+          <td id="square2">&nbsp;</td>
+          <td id="square7">&nbsp;</td>
+          <td id="free">Free</td>
+          <td id="square16">&nbsp;</td>
+          <td id="square21">&nbsp;</td>
+        </tr>
+        <tr>
+          <td id="square3">&nbsp;</td>
+          <td id="square8">&nbsp;</td>
+          <td id="square12">&nbsp;</td>
+          <td id="square17">&nbsp;</td>
+          <td id="square22">&nbsp;</td>
+        </tr>
+        <tr>
+          <td id="square4">&nbsp;</td>
+          <td id="square9">&nbsp;</td>
+          <td id="square13">&nbsp;</td>
+          <td id="square18">&nbsp;</td>
+          <td id="square23">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><a href="javascript:void(0);" onclick="createBingoCard()" class="Reload" id="Reload">Click Here</a> <button id="bingoreset" onclick="createBingoCard()">RESET</button>to create a new card.</p>
+  <hr>
+  <div id="wrapper">
+    <noscript>Please Enable Javascript</noscript>
+    <h2>Dynamic changes with a click.</h2>
+    <div id="cwc">
+    <a id="cwc1" onclick="changeColor(this)">Click me!</a><br>
+    <a id="OnCLick2" onclick="newStyle();">Click ME!</a><br>
+    </div>
+    <hr>
+    <h2>HTML tags testing.</h2>
+    <div class="h1tags_insert"></div>
+    <p> Random story here. wrapped in a P tag, <br>and some more story on another line using a BR tag</br></p> <!-- NOTE: paragraph tag adds 2 line breaks after the closing of a paragraph tag.....  Breaks only add one-->
+    <blockquote cite="http://google.com">
+      indent this text-  this has a cite reference using a blockquote tag
+    </blockquote>
+    <q cite="www.google.com">this is a quote tag with a "cite" reference using a q cite tag</q>
+    <hr>
+    <pre> <!-- white space included -->
+                    ___/     \___
+                   `-._)     (_,-` Hello, I am a pre tag
+                       \O _ O/
+                        \ - /
+                         `-(
+                          ||
+                         _||_
+                        |-..-|
+                        |/. \|
+                        |\__/|
+                      ._|//\\|_,
+                      `-((  ))-'
+                       __\\//__ gnv
+                       >_ /\ _<,
+                         '  '
+    </pre>
+    <pre>
+    pre tags also allows you to include code and not execute it.... see below!
+    
+    function(init)
+      <var>H1tags</var> = document.getElementsByTagName("h1");
+      <var>H1tags[0]</var>.onclick = changeColor
+    </pre>
+    </div> <!--wrapper-->
+    <hr>
+    
+    <!-- Broken Rollover Stuff, maybe fix in the future
+    <p id="1">1</p>
+    <p id="2">2</p>
+    <p id="3">3</p>
+    <p id="4">4</p>
+    <br>
+    <a href="next1.html"><img src="images/iPad Transports/Rew_^#DOWN.png" alt="button1" id="button1"></a>&nbsp;&nbsp;
+    <a href="next2.html"><img src="images/iPad Transports/Fwd_^#DOWN.png" alt="button2" id="button2"></a>&nbsp;&nbsp;
+    -->
+
 </body>
- 
 </html>
