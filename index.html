@@ -7,10 +7,10 @@
   <meta name="description" content="this is what is in the document for search engines and stuff, limited to 200 chars"/>
   <meta name="keywords" content="html5 canvas, html5 tutorial, html5 tags limited to 1000 chars"/>
   <meta name="robots" content="index,follow"/> <!--or noindex,noarchive,nofollow-->
-  <script src="./assets/js/global.js"></script> 
 	<noscript><h1>This page requires javascript</h1></noscript>
   <link rel="stylesheet" href="./assets/css/BingoCard.css">
   <link rel="stylesheet" href="./assets/css/rollover.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   <!-- <base href="/assets/"> The <base> tag specifies the base URL/target for all relative URLs in a document. -->
     <style type="text/css">
 	     #cwc{
@@ -24,15 +24,22 @@
 
  
 <body>
-  <h1>Welcome!</h1>
-  <h2>Testing and learning here!</h2>
-  <p>Welcome to my <strong>TEST</strong> website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-  <hr>
+  <header>
+    <h1>Welcome!</h1>
+    <h2>Testing and learning here!</h2>
+    <p>Welcome to my <strong>TEST</strong> website!</p>
+    <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <nav>
+
+    </nav>
+  </header>
+  <main>
+  <section id="bingo-section">
   <h2>Create a Random Bingo Card</h2>
+  <p id="bingo-card">
     <table width="400" border="1">
       <tbody>
-        <tr>
+        <tr bgcolor="lightblue">
           <th scope="col">B</th>
           <th scope="col">I</th>
           <th scope="col">N</th>
@@ -77,15 +84,17 @@
       </tbody>
     </table>
     <p><a href="javascript:void(0);" onclick="createBingoCard()" class="Reload" id="Reload">Click Here</a> <button id="bingoreset" onclick="createBingoCard()">RESET</button>to create a new card.</p>
-  <hr>
-  <div id="wrapper">
+    </p>
+</section>
+  <section id="dynamic-section">
     <noscript>Please Enable Javascript</noscript>
     <h2>Dynamic changes with a click.</h2>
-    <div id="cwc">
-    <a id="cwc1" onclick="changeColor(this)">Click me!</a><br>
+    <div class="orange-block" id="cwc">
+    <a id="cwc1" onclick="changeColor(this)">Click me!</a><br><br>
     <a id="OnCLick2" onclick="newStyle();">Click ME!</a><br>
     </div>
-    <hr>
+    </section>
+    <section id="tags-section">
     <h2>HTML tags testing.</h2>
     <div class="h1tags_insert"></div>
     <p> Random story here. wrapped in a P tag, <br>and some more story on another line using a BR tag</br></p> <!-- NOTE: paragraph tag adds 2 line breaks after the closing of a paragraph tag.....  Breaks only add one-->
@@ -118,8 +127,7 @@
       <var>H1tags</var> = document.getElementsByTagName("h1");
       <var>H1tags[0]</var>.onclick = changeColor
     </pre>
-    </div> <!--wrapper-->
-    <hr>
+  </section> <!--wrapper-->
     
     <!-- Broken Rollover Stuff, maybe fix in the future
     <p id="1">1</p>
@@ -130,6 +138,19 @@
     <a href="next1.html"><img src="images/iPad Transports/Rew_^#DOWN.png" alt="button1" id="button1"></a>&nbsp;&nbsp;
     <a href="next2.html"><img src="images/iPad Transports/Fwd_^#DOWN.png" alt="button2" id="button2"></a>&nbsp;&nbsp;
     -->
+    <section id='more-section'>
+      <p class="orange-block" id='info'>JavaScript is the programming language of the web. You can use it to add dynamic behavior and store information.
+    </p>
+    <p class="orange-block" id='more-info'>JavaScript can also handle requests and responses on a website. It's a great language to master for front-end and back-end web development.
+    </p>  
+      <button id='read-more'>Read More</button>
+    </section>
+  </main>
+  <footer>
 
+  </footer>
+
+
+    <script src="./assets/js/global.js"></script> 
 </body>
 </html>

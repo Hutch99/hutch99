@@ -1,2 +1,64 @@
 /* CSS Document */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+  }
+  h1, h2, h3, h4, h5, h6{
+    text-align: center;
+  }
+  #bingo-card{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+  }
 
+  #bingo-section{
+    background: #fff;
+  }
+  #dynamic-section{
+    background: #141c3a;
+  }
+  #tags-section{
+    background: #fff;
+  }
+  #more-section{
+    background: #141c3a;
+
+  }
+  #more-section, #bingo-section, #dynamic-section, #tags-section{
+    margin: 0;
+    display: block;
+    float: left;
+    width: 100vw;
+    height: 50vh;
+  }
+  #read-more{
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    border: none;
+    display: block;
+    background-color: #6df0c2;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .orange-block{
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    background-color: #fd4d3f;
+    color: white;
+    margin-top: 20px;
+  }
+  #more-info{
+    display: none;
+  }

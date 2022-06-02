@@ -1,9 +1,6 @@
 
 
-function init(){
-	var h1tags = document.getElementsByTagName("h1");
-	h1tags[0].onclick=ChangeColor;
-}
+
 
 function newStyle() {
 	let newColor = '';
@@ -61,7 +58,23 @@ function createBingoCard() {
     document.getElementById('square' + i).innerHTML = newRandomNum;
   }
 }
+
+let readMore = document.getElementById('read-more');
+let moreInfo = document.getElementById('more-info');
+
+function showInfo(){
+	if (moreInfo.style.display == 'block'){
+      moreInfo.style.display =('none');
+	  readMore.innerHTML = 'Read More';
+	}
+	else
+	{
+		moreInfo.style.display =('block');
+		readMore.innerHTML = 'Read Less';
+	}
+}
+readMore.addEventListener('click', showInfo);
 //document.getElementById('bingoreset').onclick = createBingoCard;
 
 onload = createBingoCard;
-onload = init();
+
