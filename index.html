@@ -83,12 +83,12 @@
         </tr>
       </tbody>
     </table>
-    <p><a href="javascript:void(0);" onclick="createBingoCard()" class="Reload" id="Reload">Click Here</a> <button id="bingoreset" onclick="createBingoCard()">RESET</button>to create a new card.</p>
+    <p><a href="javascript:void(0);" onclick="createBingoCard()" class="Reload" id="Reload">Click Here</a> or click <button id="bingoreset" onclick="createBingoCard()">RESET</button> to create a new card.</p>
     </p>
 </section>
   <section id="dynamic-section">
     <noscript>Please Enable Javascript</noscript>
-    <h2>Dynamic changes with a click.</h2>
+    <h2 id="dynamic-click">Dynamic changes with a click.</h2>
     <div class="orange-block" id="cwc">
     <a id="cwc1" onclick="changeColor(this)">Click me!</a><br><br>
     <a id="OnCLick2" onclick="newStyle();">Click ME!</a><br>
@@ -144,6 +144,31 @@
     <p class="orange-block" id='more-info'>JavaScript can also handle requests and responses on a website. It's a great language to master for front-end and back-end web development.
     </p>  
       <button id='read-more'>Read More</button>
+    </section>
+    <section id='color-change-section'>
+      <img id="rainbow-img" src='http://pngimg.com/uploads/rainbow/rainbow_PNG5580.png'/>
+      <h1>Random Color Generator</h1>
+      <p id="fav-color">Find your new favorite color!</p>
+      <button id='color-button'>Click on me</button>
+      <button id='next-button'>Scroll on me</button>
+    </section>
+    <section id='mouse-clicks'>
+      <ul>
+          <li id='list-item-one'>The mouse must pass over to increase the box width</li>
+          <li id='list-item-two'>Release the mouse button to change the color</li>
+          <li id='list-item-three'>The mouse must leave the box to change the text</li>
+          <li id='list-item-four'>Click the mouse to make the fifth box appear</li>
+          <li id='list-item-five'>You found me!</li>
+          <button id='reset-button'>Reset</button>
+      </ul>
+    </section>
+    <section id='ball-bounce'>
+      <h1 -id="h1-ball-bounce">Ball Bounce</h1>
+      <p id="p-ball-bounce">Let's dribble the ball on the platform using any key on your keyboard. Hold a key down to lift the ball, then release the key to drop the ball.</p>
+      <!--<button id='button'>Reset</button>-->
+      <section id='float-circle'></section> 
+      <section id='platform'></section>
+      <section id='floor'></section>
     </section>
   </main>
   <footer>
