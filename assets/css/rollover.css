@@ -85,7 +85,7 @@ body{
     background: #fd4d3f;
     margin: 0 auto;
   }
-  #more-section, #bingo-section, #dynamic-section, #tags-section, #color-change-section{
+  #more-section, #bingo-section, #dynamic-section, #tags-section, #color-change-section, #mouse-clicks, #ball-bounce{
     margin: 0;
     display: block;
     float: left;
@@ -123,10 +123,7 @@ body{
   }
   #mouse-clicks{
     background: #efd9ca;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    float: left;
+
   }
   #list-item-one, #list-item-two , #list-item-three, #list-item-four, #list-item-five{
     width: 400px;
@@ -166,10 +163,7 @@ body{
   #ball-bounce{
     background: #6400e4;
     position:relative;
-    width: 100vw;
     height: 50vh;
-    margin: 0;
-    float: left;
   }
   #float-circle{
     width: 100px;
@@ -216,3 +210,94 @@ body{
     margin-bottom: 40px;
     color: white;
   }
+
+  .breadcrumb {
+    text-align: left;
+  }
+  .breadcrumb li {
+    float: left;
+  }
+  
+  .breadcrumb a {
+    color: #fff;
+    background: darkcyan;
+    text-decoration: none;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 15px;
+    padding: 0 5px;
+  }
+  
+  .breadcrumb a::before,
+  .breadcrumb a::after {
+    content: "";
+    position: absolute;
+    border-color: darkcyan;
+    border-style: solid;
+    border-width: 15px 5px;
+  }
+  
+  .breadcrumb a::before {
+    left: -10px;
+    border-left-color: transparent;
+  }
+  .breadcrumb a::after {
+    left: 100%;
+    border-color: transparent;
+    border-left-color: darkcyan;
+  }
+  
+  .breadcrumb a:hover {
+    background-color: blue;
+  }
+  .breadcrumb a:hover::before {
+    border-color: blue;
+    border-left-color: transparent;
+  }
+  .breadcrumb a:hover::after {
+    border-left-color: blue;
+  }
+
+
+/*FLEX SECTION*/
+
+.flex-img{
+  margin: 10px auto;
+  height: auto;
+  width: auto;
+}
+
+.flex-container {
+  margin: 0 auto;
+}
+
+.flex-spacer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex-main {
+    background-color: #ffc200;
+}
+
+.flex-cards {
+  background-color: #ffc200;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+}
+
+.flex-col {
+display:inline-flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+#flex-expertise {
+  padding: 20px;
+  background-color: #ffc200;
+  margin: 0;
+  text-align: center;
+}
