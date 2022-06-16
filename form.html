@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>New Customer Form</title>
+    <link rel="stylesheet" href="./assets/css/forms.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <main>
+        <section id="top">
+            <img src="./assets/img/InnovaitveBlackTextSquare-100.jpg" alt="Company Logo">
+          </section>
+      
+          <section id="main">
+            <h1>Interested in becomming a new customer?<br> Please fill out the form below!</h1>
+            <hr>
+              <form action="NewCustComplete.html" method="GET">
+                <h2>Your Contact Info</h2>
+                <label for="your-first-name">Your First Name:</label>   <input id="your-first-name" type="text" value="" minlength="2" required>
+                <label for="your-last-name">Your Last Name:</label>   <input id="your-last-name" type="text" value="" minlength="2" required>
+                <label for="your-title">Your Title:</label>  <input id="your-title" type="text" value="" minlength="2" required>
+                <label for="your-phone">Your Phone:</label>  <input id="your-phone" type="tel" value="" min="10" max="10" required>
+                <label for="your-email">Your Email:</label>  <input id="your-email" type="email" value="" required>
+                <h2>Company Contact Info</h2>
+                <label for="company-name">Company Name:</label>    <input id="company-name" type="text" value="" required>
+                <label for="company-owner">Company Owner/s:</label> <input id="company-owner" type="text" value="" required>
+                <label for="company-phone">Company Phone:</label>   <input id="company-phone" type="tel" value="" required>
+                <label for="company-website">Company Website:</label> <input id="company-website" type="url" value="" required>
+                <label for="company-address">Company Address:</label> <input id="company-address" type="text" value="" required>
+                <h2>Company History</h2>
+                <label for="years-business">Year founded:</label>   <input id="years-business" type="month" required>
+                <label for="history">Where were you before?(if less than 5 years):</label> <input id="history" type="text" value="" required>
+                <label for="revenue">Annual Revenue:</label>  <input id="revenue" type="number" value="" required>
+                <label for="com-or-res">Commercial or Residential:</label>   <input id="com-or-res" type="list" list="tickmarks" size="30" required>
+                <datalist id="tickmarks">
+                    <option value="  0% Residential - 100% Commercial" label="Commercial"></option>
+                    <option value=" 25% Residential -  75% Commercial"></option>
+                    <option value=" 50% Residential -  50% Commercial" label="50/50"></option>
+                    <option value=" 75% Residential -  25% Commercial"></option>
+                    <option value="100% Residential -   0% Commercial" label="Residential"></option>
+                    </datalist>
+
+
+                <label for="office">Do you have an office location?:</label>   <input id="office" type="" value="" required>
+                <label for="showroom">Do you have an showroom?:</label>   <input id="showroom" type="" value="" required>
+                <label for="num-of-loc"># of locations:</label>  <input id="num-of-loc" type="" value="" required>
+                <label for="num-of-employees"># of employees, techs, programmers:</label>  <input id="num-of-employees" type="" value="" required>
+                <label for="who-attend-training">Who would attend training:</label>   <input id="who-attend-training" type="" value="" required>
+                <label for="competitors">Who are your biggest competitors?:</label>   <input id="competitors" type="" value="" required>
+                <label for="purchase-product-from">Where do you buy most of your products?: </label>    <input id="purchase-product-from" type="" value="" required>
+                <label for="advertise">How do you advertise/go to market?: </label> <input id="advertise" type="" value="" required>
+                <label for="retro-or-new">Retro or new construction?: </label> <input id="retro-or-new" type="" value="" required>
+                <label for="neighborhood">What neighborhoods do you usually work in?:</label>  <input id="neighborhood" type="" value="" required>
+                <label for="builders">Do you work with builders, architects, designers, or specifiers, who?: </label>  <input id="builders" type="" value="" required>
+                <label for="avg-ticket">What is the average size of job/ticket?:</label> <input id="avg-ticket" type="" value="" required>
+                <h2>Product Info and annual sales $$ amount</h2>
+                <label for="speakers">Speaker business - in wall, box speakers, subwoofers: </label>   <input id="speakers" type="" value="" required>
+                <label for="lighting">Lighting controls: </label>  <input id="lighting" type="" value="" required>
+                <label for="fixtures">Lighting fixtures: </label>  <input id="fixtures" type="" value="" required>
+                <label for="shades">Shades:</label>  <input id="shades" type="" value="" required>
+                <label for="security-cams">Security cameras: </label>   <input id="security-cams" type="" value="" required>
+                <label for="security-systems">Security systems:</label>    <input id="security-systems" type="" value="" required>
+                <label for="control-sys">Control systems: </label>    <input id="control-sys" type="" value="" required>
+                <label for="receivers">AV Receivers: </label>   <input id="receivers" type="" value="" required>
+                <label for="video-dist">AV Distributions: </label>   <input id="video-dist" type="" value="" required>
+                <label for="wire-cable">Wire/Cable: </label> <input id="wire-cable" type="" value="" required>
+                <h2>Other</h2>
+                <label for="notes">Notes:</label>   <input id="notes" type="" value="" required>
+                <input type="Submit" value="Submit">
+              </form>
+          </section>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
