@@ -1,34 +1,56 @@
+#hutch{
+    width:100%
+}
+
 #head{
     background: lightslategray;
     box-shadow: 1px 1px 4px black, 0px -1px 4px black;
 }
 
-@media only screen and (max-width: 1100px){
+/* @media only screen and (min-width: 1100px){
     header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     padding: 0 10px;
-    height: 166px;
+    height: 70px;
     background: #fff;
     box-shadow: none;
     width: 100%;
     z-index: 5;
     box-sizing: border-box;
     }
-}
+} */
 
-article, aside, dialog, figure, footer, header, hgroup, nav, section {
+article, aside, dialog, figure, footer, header, hgroup, nav, section, main {
     display: block;
 }
 
+main{
+    padding-top: 25px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 24px;
+    text-align: left;
+}
+
+h3 {
+
+}
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-    margin: 0;
+    margin-top: 0px;
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 100%;
     vertical-align: baseline;
     background: transparent;
 }
@@ -39,9 +61,13 @@ body {
     font-family: Arial,Helvetica,sans-serif;
     font-size: 14px;
     color: #363636;
-    _padding-top: 22px;
-    text-align: center;
-    overflow: hidden;
+    padding-top: 0;
+    overflow: auto;
+    width:100%;
+}
+
+#hutch #head{
+    height: 75px;
 }
 
 #hutch #head .c {
@@ -104,7 +130,9 @@ body {
 
 #hutch #head .secondary>ul {
     height: 100%;
+    margin:0px 20px;
 }
+
 
 #hutch #head .secondary>ul>li {
     display: inline-block;
@@ -112,7 +140,7 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
-    padding: 0 20px;
+    padding: 0 5px;
 
 }
 
@@ -126,12 +154,13 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0;
-    background: none;
+    padding: 10px 30px;
+    background: #5a6781;
     height: 100%;
     position: relative;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border-radius: 8px;
 }
 
 #hutch #head #primary-nav-wrap {
@@ -178,7 +207,7 @@ body {
     position: absolute !important;
 }
 
-#hutch #head #primary-nav-wrap .primary-nav ul li {
+#hutch #head #primary-nav-wrap .primary-nav ul li{
     display: inline-block;
     font-family: campton,Helvetica,Arial,sans-serif;
     font-weight: bold;
@@ -193,6 +222,8 @@ body {
     position: relative;
     
 }
+
+
 
 #hutch #head #primary-nav-wrap .primary-nav ul li a {
     border-bottom: 0 solid #fff;
@@ -222,4 +253,33 @@ ul li {
 li {
     display: list-item;
     text-align: -webkit-match-parent;
+}
+
+
+
+main ul li{
+    display: inline-block;
+}
+
+section{
+    max-width: 75%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+section h1{
+    text-align: center;
+}
+
+main #skills ul li, main #projects ul li{
+
+    padding: 6px;
+    margin: 4px;
+    background:lightgrey;
+    border-radius: 2px;
+}
+
+main #contact ul li img{
+    width: 24px;
+    height: 24px;
 }
