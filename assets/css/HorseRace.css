@@ -1,0 +1,82 @@
+@charset "utf-8";
+body
+{
+	background-color: white;
+	color: black;
+	font-size: 20px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+}
+
+h1, th
+{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+
+h1
+{
+	font-size: 28px;
+}
+table
+{
+	border-collapse: collapse;
+	table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+th{
+	background-color: rgb(173, 216, 230);
+}
+
+th,td
+{
+	padding: 10px;
+	border: 2px #666 solid;
+	text-align: center;
+	width: 20%;
+}
+
+#free, .pickedBG
+{
+
+}
+
+#winningBG
+{
+	background-image: url(../images/redflash.gif)
+}
+
+.spot{
+
+}
+
+th.finish{
+	background-color: rgb(173, 216, 230);
+	background: none;
+}
+
+.finish{
+	background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
+              50% / 20px 20px
+}
+
+
+
+.starting{
+	background-color: rgba(38, 0, 255, 0.623);
+}
+
+.out{
+	background-color: rgb(167, 167, 167);
+}
+
+.move{
+	background-color: rgb(251, 255, 0);
+}
+
+@keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
+  }
