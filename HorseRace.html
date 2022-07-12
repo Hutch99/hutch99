@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<!-- comment-->
+<HTML lang="en">
+<head>
+  <meta charset="UTF-8"/>
+ 	<noscript><h1>This page requires javascript</h1></noscript>
+  <link rel="stylesheet" href="./assets/css/HorseRace.css">
+  <link rel="stylesheet" href="./assets/css/rollover.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="icon" href="./assets/img/favicon.ico">
+  <title>Horse Race</title>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul class="breadcrumb">
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./HorseRace.html">Horse Race Game</a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <section id="HorseRaceCard">
+        <h2>Winners Circle</h2>
+        <p id="horse-card">
+            <table>
+                <thead>
+                    <tr>                                               <!-- top row -->
+                        <th class="move" scope="col">Move Forward</th> <!-- Left column label-->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[0].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- horse 2 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[1].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- Horse 3 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[2].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- Horse 4 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[3].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- Horse 5 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[4].moveForward()" class="Reload" class="Reload">Move Forward</a></th>           <!-- Horse 6 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[5].moveForward()" class="Reload" class="Reload">Move Forward</a></th>           <!-- Horse 7 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[6].moveForward()" class="Reload" class="Reload">Move Forward</a></th>           <!-- Horse 8 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[7].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- Horse 9 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[8].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- Horse 10 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[9].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- Horse 11 -->
+                        <th class="move" scope="col"><a href="javascript:void(0);" onclick="horses[10].moveForward()" class="Reload" class="Reload">Move Forward</a></th>            <!-- Horse 12 -->
+                        <th class="move" scope="col">Move Forward</th> <!-- Right Colum label -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>    <!-- Finish Row-->
+                        <th class="finish" scope="row">Finish Line</th>         
+                         <td class="finish" id="finish-2" data-label="3">+</td>     <!-- Horse 2 -->
+                        <td class="finish" id="finish-3" data-label="5">+</td>      <!-- Horse 3 -->
+                        <td class="finish" id="finish-4" data-label="7">+</td>      <!-- Horse 4 -->
+                        <td class="finish" id="finish-5" data-label="9">+</td>      <!-- Horse 5 -->
+                        <td class="finish" id="finish-6" data-label="11">+</td>     <!-- Horse 6 -->
+                        <td class="finish" id="finish-7" data-label="13">+</td>     <!-- Horse 7 -->
+                        <td class="finish" id="finish-8" data-label="11">+</td>     <!-- Horse 8 -->
+                        <td class="finish" id="finish-9" data-label="9">+</td>      <!-- Horse 9 -->
+                        <td class="finish" id="finish-10" data-label="7">+</td>     <!-- Horse 10 -->
+                        <td class="finish" id="finish-11" data-label="5">+</td>     <!-- Horse 11 -->
+                        <td class="finish" id="finish-12" data-label="3">+</td>     <!-- Horse 12 -->
+                        <th class="finish" data-label="Header Row">Finish Line</td> 
+                    </tr>
+                    <tr> <!-- 12th row-->
+                        <th scope="row">12</th>                 
+                        <td data-label="3"></td>                
+                        <td class="spot" id="horse-3-move-4" data-label="5">X</td>  <!-- Horse 3-->
+                        <td class="spot" id="horse-4-move-6" data-label="7">X</td>  <!-- Horse 4-->
+                        <td class="spot" id="horse-5-move-8" data-label="9">X</td>  <!-- Horse 5-->
+                        <td class="spot" id="horse-6-move-11" data-label="11">X</td> <!-- Horse 6-->
+                        <td class="spot" id="horse-7-move-12" data-label="13">X</td> <!-- Horse 7-->
+                        <td class="spot" id="horse-8-move-11" data-label="11">X</td> <!-- Horse 8-->
+                        <td class="spot" id="horse-9-move-8" data-label="9">X</td>  <!-- Horse 9-->
+                        <td class="spot" id="horse-10-move-6" data-label="7">X</td>  <!-- Horse 10-->
+                        <td class="spot" id="horse-11-move-4" data-label="5">X</td>  <!-- Horse 11-->
+                        <td data-label="3"></td>                
+                        <th data-label="Header Row">12</td>
+                    </tr>
+                    <tr>                                                        <!-- 11th row-->
+                        <th scope="row">11</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td data-label="7"></td>
+                        <td data-label="9"></td>
+                        <td class="spot" id="horse-6-move-10" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-11" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-10" data-label="11">X</td>
+                        <td data-label="9"></td>
+                        <td data-label="7"></td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">11</td>
+                    </tr>
+                    <tr>                                                        <!-- 10th row-->
+                        <th scope="row">10</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td class="spot" id="horse-4-move-5" data-label="7">x</td>
+                        <td data-label="9"></td>
+                        <td class="spot" id="horse-6-move-9" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-10" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-9" data-label="11">X</td>
+                        <td data-label="9"></td>
+                        <td class="spot" id="horse-10-move-5" data-label="7">X</td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">10</td>
+                    </tr>
+                    <tr>                                                        <!-- 9th row-->
+                        <th scope="row">9</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td data-label="7"></td>
+                        <td class="spot" id="horse-5-move-7" data-label="9">X</td>
+                        <td class="spot" id="horse-6-move-8" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-9" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-8" data-label="11">X</td>
+                        <td class="spot" id="horse-9-move-7" data-label="9">X</td>
+                        <td data-label="7"></td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">9</td>
+                    </tr>
+                    <tr>                                                    <!-- 8th row-->
+                        <th scope="row">8</th>
+                        <td class="spot" id="horse-2-move-2" data-label="3">X</td>
+                        <td class="spot" id="horse-3-move-3" data-label="5">X</td>
+                        <td class="spot" id="horse-4-move-4" data-label="7">X</td>
+                        <td class="spot" id="horse-5-move-6" data-label="9">X</td>
+                        <td class="spot" id="horse-6-move-7" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-8" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-7" data-label="11">X</td>
+                        <td class="spot" id="horse-9-move-6" data-label="9">X</td>
+                        <td class="spot" id="horse-10-move-4" data-label="7">X</td>
+                        <td class="spot" id="horse-11-move-3" data-label="5">X</td>
+                        <td class="spot" id="horse-12-move-2" data-label="3">X</td>
+                        <th data-label="Header Row">8</td>
+                    </tr>
+                    <tr>                                                     <!-- 7th row-->
+                        <th scope="row">7</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td data-label="7"></td>
+                        <td class="spot" id="horse-5-move-5" data-label="9">X</td>
+                        <td class="spot" id="horse-6-move-6" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-7" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-6" data-label="11">X</td>
+                        <td class="spot" id="horse-9-move-5" data-label="9">X</td>
+                        <td data-label="7"></td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">7</td>
+                    </tr>
+                    <tr>                                                 <!-- 6th row-->
+                        <th scope="row">6</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td class="spot" id="horse-4-move-3" data-label="7">x</td>
+                        <td data-label="9"></td>
+                        <td data-label="11"></td>
+                        <td class="spot" id="horse-7-move-6" data-label="13">X</td>
+                        <td data-label="11"></td>
+                        <td data-label="9"></td>
+                        <td class="spot" id="horse-10-move-3" data-label="7">X</td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">6</td>
+                    </tr>
+                    <tr>                                            <!-- 5th row-->
+                        <th scope="row">5</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td data-label="7"></td>
+                        <td class="spot" id="horse-5-move-4" data-label="9">X</td>
+                        <td class="spot" id="horse-6-move-5" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-5" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-5" data-label="11">X</td>
+                        <td class="spot" id="horse-9-move-4" data-label="9">X</td>
+                        <td data-label="7"></td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">5</td>
+                    </tr>
+                    <tr>                                           <!-- 4th row-->
+                        <th scope="row">4</th>
+                        <td class="spot" id="horse-2-move-1" data-label="3">X</td>
+                        <td class="spot" id="horse-3-move-2" data-label="5">X</td>
+                        <td class="spot" id="horse-4-move-2" data-label="7">X</td>
+                        <td class="spot" id="horse-5-move-3" data-label="9">X</td>
+                        <td class="spot" id="horse-6-move-4" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-4" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-4" data-label="11">X</td>
+                        <td class="spot" id="horse-9-move-3" data-label="9">X</td>
+                        <td class="spot" id="horse-10-move-2" data-label="7">X</td>
+                        <td class="spot" id="horse-11-move-2" data-label="5">X</td>
+                        <td class="spot" id="horse-12-move-1" data-label="3">X</td>
+                        <th data-label="Header Row">4</td>
+                    </tr>
+                    <tr>                                         <!-- 3rd row-->
+                        <th scope="row">3</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td data-label="7"></td>
+                        <td class="spot" id="horse-5-move-2" data-label="9">X</td>
+                        <td class="spot" id="horse-6-move-3" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-3" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-3" data-label="11">X</td>
+                        <td class="spot" id="horse-9-move-2" data-label="9">X</td>
+                        <td data-label="7"></td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">3</td>
+                    </tr>
+                    <tr>                                         <!-- 2nd row-->
+                        <th scope="row">2</th>
+                        <td data-label="3"></td>
+                        <td data-label="5"></td>
+                        <td data-label="7"></td>
+                        <td data-label="9"></td>
+                        <td class="spot" id="horse-6-move-2" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-2" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-2" data-label="11">X</td>
+                        <td data-label="9"></td>
+                        <td data-label="7"></td>
+                        <td data-label="5"></td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">2</td>
+                    </tr>
+                    <tr>                                          <!-- 1st row-->
+                        <th scope="row">1</th>
+                        <td data-label="3"></td>
+                        <td class="spot" id="horse-3-move-1" data-label="5">X</td>
+                        <td class="spot" id="horse-4-move-1" data-label="7">X</td>
+                        <td class="spot" id="horse-5-move-1" data-label="9">X</td>
+                        <td class="spot" id="horse-6-move-1" data-label="11">X</td>
+                        <td class="spot" id="horse-7-move-1" data-label="13">X</td>
+                        <td class="spot" id="horse-8-move-1" data-label="11">X</td>
+                        <td class="spot" id="horse-9-move-1" data-label="9">X</td>
+                        <td class="spot" id="horse-10-move-1" data-label="7">X</td>
+                        <td class="spot" id="horse-11-move-1" data-label="5">X</td>
+                        <td data-label="3"></td>
+                        <th data-label="Header Row">1</td>
+                    </tr>
+                    <tr>                                                        <!-- starting line-->
+                        <th class="starting" scope="row">Starting Line</th>
+                        <td class="starting" id="start-2" data-label="3">2</td>
+                        <td class="starting" id="start-3" data-label="5">3</td>
+                        <td class="starting" id="start-4" data-label="7">4</td>
+                        <td class="starting" id="start-5" data-label="9">5</td>
+                        <td class="starting" id="start-6" data-label="11">6</td>
+                        <td class="starting" id="start-7" data-label="13">7</td>
+                        <td class="starting" id="start-8" data-label="11">8</td>
+                        <td class="starting" id="start-9" data-label="9">9</td>
+                        <td class="starting" id="start-10" data-label="7">10</td>
+                        <td class="starting" id="start-11" data-label="5">11
+
+            Jack</td>
+                        <td class="starting" id="start-12" data-label="3">12
+            
+            Queen</td>
+                        <th class="starting" data-label="Header Row">Starting Line</td>
+                    </tr>
+                    <tr>
+                        <th class="out" scope="row">Out
+            
+            $1</th>
+                        <td class="out" id="horse-2-out-1" data-label="3"></td>
+                        <td class="out" id="horse-3-out-1" data-label="5"></td>
+                        <td class="out" id="horse-4-out-1" data-label="7"></td>
+                        <td class="out" id="horse-5-out-1" data-label="9"></td>
+                        <td class="out" id="horse-6-out-1" data-label="11"></td>
+                        <td class="out" id="horse-7-out-1" data-label="13"></td>
+                        <td class="out" id="horse-8-out-1" data-label="11"></td>
+                        <td class="out" id="horse-9-out-1" data-label="9"></td>
+                        <td class="out" id="horse-10-out-1" data-label="7"></td>
+                        <td class="out" id="horse-11-out-1" data-label="5"></td>
+                        <td class="out" id="horse-12-out-1" data-label="3"></td>
+                        <th class="out" data-label="Header Row">Out
+            $1</td>
+                    </tr>
+                    <tr>
+                        <th class="out" scope="row">Out
+            
+            $2</th>
+                        <td class="out" id="horse-2-out-2" data-label="3"></td>
+                        <td class="out" id="horse-3-out-2" data-label="5"></td>
+                        <td class="out" id="horse-4-out-2" data-label="7"></td>
+                        <td class="out" id="horse-5-out-2" data-label="9"></td>
+                        <td class="out" id="horse-6-out-2" data-label="11"></td>
+                        <td class="out" id="horse-7-out-2" data-label="13"></td>
+                        <td class="out" id="horse-8-out-2" data-label="11"></td>
+                        <td class="out" id="horse-9-out-2" data-label="9"></td>
+                        <td class="out" id="horse-10-out-2" data-label="7"></td>
+                        <td class="out" id="horse-11-out-2" data-label="5"></td>
+                        <td class="out" id="horse-12-out-2" data-label="3"></td>
+                        <th class="out" data-label="Header Row">Out
+            $2</td>
+                    </tr>
+                    <tr>
+                        <th class="out" scope="row">Out
+            
+            $3</th>
+                        <td class="out" id="horse-2-out-3" data-label="3"></td>
+                        <td class="out" id="horse-3-out-3" data-label="5"></td>
+                        <td class="out" id="horse-4-out-3" data-label="7"></td>
+                        <td class="out" id="horse-5-out-3" data-label="9"></td>
+                        <td class="out" id="horse-6-out-3" data-label="11"></td>
+                        <td class="out" id="horse-7-out-3" data-label="13"></td>
+                        <td class="out" id="horse-8-out-3" data-label="11"></td>
+                        <td class="out" id="horse-9-out-3" data-label="9"></td>
+                        <td class="out" id="horse-10-out-3" data-label="7"></td>
+                        <td class="out" id="horse-11-out-3" data-label="5"></td>
+                        <td class="out" id="horse-12-out-3" data-label="3"></td>
+                        <th class="out" data-label="Header Row">Out
+            $3</td>
+                    </tr>
+                    <tr>
+                        <th class="out" scope="row">Out
+            
+            $4</th>
+                        <td class="out" id="horse-2-out-4" id="horse-2-out-4" data-label="3"></td>
+                        <td class="out" id="horse-3-out-4" data-label="5"></td>
+                        <td class="out" id="horse-4-out-4" data-label="7"></td>
+                        <td class="out" id="horse-5-out-4" data-label="9"></td>
+                        <td class="out" id="horse-6-out-4" data-label="11"></td>
+                        <td class="out" id="horse-7-out-4" data-label="13"></td>
+                        <td class="out" id="horse-8-out-4" data-label="11"></td>
+                        <td class="out" id="horse-9-out-4" data-label="9"></td>
+                        <td class="out" id="horse-10-out-4" data-label="7"></td>
+                        <td class="out" id="horse-11-out-4" data-label="5"></td>
+                        <td class="out" id="horse-12-out-4" data-label="3"></td>
+                        <th class="out" data-label="Header Row">Out
+            $4</td>
+                    </tr>
+                    <tr>
+                        <th class="move" scope="row"><a href="javascript:void(0);" onclick="restartGame()" class="Reload" class="Reload">Reset</a></th>
+                        <th class="move" data-label="3"><a href="javascript:void(0);" onclick="horses[0].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="5"><a href="javascript:void(0);" onclick="horses[1].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="7"><a href="javascript:void(0);" onclick="horses[2].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="9"><a href="javascript:void(0);" onclick="horses[3].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="11"><a href="javascript:void(0);" onclick="horses[4].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="13"><a href="javascript:void(0);" onclick="horses[5].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="11"><a href="javascript:void(0);" onclick="horses[6].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="9"><a href="javascript:void(0);" onclick="horses[7].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="7"><a href="javascript:void(0);" onclick="horses[8].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="5"><a href="javascript:void(0);" onclick="horses[9].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="3"><a href="javascript:void(0);" onclick="horses[10].moveBackward()" class="Reload" class="Reload">Move Back</a></td>
+                        <th class="move" data-label="Header Row">Move Back</td>
+                    </tr>
+                </tbody>
+            </table>
+        <p><button class="Roll Dice" onclick="rollDice()">Roll Dice</button></p>
+        <ul>
+            <li><p>DICE #1:</p><div id="dice1"></div></li>
+            <li><p>DICE #2:</p><div id="dice2"></div></li>
+            <li><p>Money in the pot:</p><div id="money"></div></li>
+            <li><p>Announcement:</p><div id="announcement1"></div></li>
+            <li><p>Announcement:</p><div id="announcement2"></div></li>
+            <li><p>Announcement:</p><div id="announcement3"></div></li>
+        </ul>
+        </p>
+      </section>
+  </main>
+  <footer>
+    <script src="./assets/js/HorseGame.js"></script>
+  </footer>
+</body>
