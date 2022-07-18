@@ -1,9 +1,7 @@
   let rollCount = 0;
   let money = 0;
-  const annountment = (words1 = '', words2 = '', words3 = '') => {
+  const annountment = (words1 = '') => {
     document.getElementById('announcement1').innerHTML = words1;
-    document.getElementById('announcement2').innerHTML = words2;
-    document.getElementById('announcement3').innerHTML = words3;
   }
 
   
@@ -194,9 +192,9 @@
     else{
       annountment('Horse #:'+ horses[diceTotal].number +' cant scratch twice, roll again!'); 
       console.log(rollCount);
-      document.getElementById('dice1').innerHTML = dice1;
-      document.getElementById('dice2').innerHTML = dice2;
     }
+    document.getElementById('dice1').innerHTML = dice1;
+    document.getElementById('dice2').innerHTML = dice2;
   };
 
 
@@ -260,7 +258,7 @@ const restartGame = () => {
   rollCount = 0;
   money = 0;
   document.getElementById('money').innerHTML = '$'+money;
-  annountment();
+  annountment('Welcome! Roll Dice to start.');
 }
 
 restartGame();
