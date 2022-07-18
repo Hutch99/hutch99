@@ -7,6 +7,10 @@ body
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 }
 
+div{
+display: block;
+}
+
 h1, th
 {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
@@ -22,7 +26,7 @@ table
 	table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid purple;
+  border: 3px solid rgb(0, 0, 0);
 }
 
 th{
@@ -37,15 +41,11 @@ th,td
 	width: 20%;
 }
 
-#free, .pickedBG
-{
-
+main{
+	background-color: #011c39;
+    background-repeat: repeat;
 }
 
-#winningBG
-{
-	background-image: url(../images/redflash.gif)
-}
 
 .spot{
 
@@ -60,7 +60,6 @@ th.finish{
 	background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
               50% / 20px 20px
 }
-
 
 
 .starting{
@@ -79,4 +78,98 @@ th.finish{
 	50% {
 	  opacity: 0;
 	}
+  }
+
+  #dice1 #dice2 #money{
+	display: block;
+  }
+
+
+
+header{
+	background-color: #011c39;
+    background-repeat: repeat;
+	border-bottom: solid 4px rgba(0, 0, 0, 0.4);
+    z-index: 50;
+    height: 71px;
+}
+
+  .left{
+	float: left;
+	height: 100%;
+	display: block;
+	width: 250px;
+	min-height: 10px;
+  }
+
+#header .middle{
+	height: 100%;
+}
+
+  .middle{
+	float: left;
+    width: calc(100% - 250px - 250px);
+  }
+
+  .right{
+	float: left;
+    height: 100%;
+    display: block;
+    width: 250px;
+    min-height: 10px;
+  }
+
+  #horse-race-card-holder{
+	height: 85vh;
+    min-height: 100px;
+    border: solid 4px rgba(0, 0, 0, 0.4);
+    border-top: 0;
+    height: -moz-calc(100vh - 71px - 10px);
+    height: -webkit-calc(100vh - 71px - 10px);
+    height: calc(100vh - 71px - 10px);
+  }
+
+  #horse-race-card{
+
+  }
+
+  #horse-card{
+	background-image: url(../img/247-video-poker-game-bg.png);
+	background-color: #075500;
+    background-repeat: repeat;
+  }
+
+  #finish-row td{
+	background-color: white;
+  }
+
+  #finish-row th{
+	color: white;
+  }
+
+  #starting-row{
+	color: white;
+  }
+
+  .button {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #075500;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
   }

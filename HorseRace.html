@@ -12,21 +12,37 @@
 </head>
 <body>
   <header>
-    <nav>
-        <ul class="breadcrumb">
-          <li>
-            <a href="./index.html">Home</a>
-          </li>
-          <li>
-            <a href="./HorseRace.html">Horse Race Game</a>
-          </li>
-        </ul>
-      </nav>
+    <section class="left"></section>
+    <section class="middle">
+        <nav>
+            <ul class="breadcrumb">
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <a href="./HorseRace.html">Horse Race Game</a>
+              </li>
+            </ul>
+          </nav>
+    </section>
+    <section class="right"></section>
+    
   </header>
   <main>
-    <section id="HorseRaceCard">
-        <h2>Winners Circle</h2>
-        <p id="horse-card">
+    <section class="left">
+        <p><button class="button" onclick="rollDice()">Roll Dice</button></p>
+        <ul>
+            <li><p>DICE #1: <span id="dice1">0</span></p></li>
+            <li><p>DICE #2: <span id="dice2">0</span></p></li>
+            <li><p>Money in the pot: <span id="money"></span></p></li>
+        </ul>
+        </p>
+    </section>
+    <section class="middle">
+        <div id#="horse-race-card-holder">
+    <section id="horse-race-card">
+        <h2><div id="announcement1">Welcome! Roll Dice to start.</div></h2>
+        <div id="horse-card">
             <table>
                 <thead>
                     <tr>                                               <!-- top row -->
@@ -46,7 +62,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>    <!-- Finish Row-->
+                    <tr id='finish-row'>    <!-- Finish Row-->
                         <th class="finish" scope="row">Finish Line</th>         
                          <td class="finish" id="finish-2" data-label="3">+</td>     <!-- Horse 2 -->
                         <td class="finish" id="finish-3" data-label="5">+</td>      <!-- Horse 3 -->
@@ -241,7 +257,7 @@
                         <td data-label="3"></td>
                         <th data-label="Header Row">1</td>
                     </tr>
-                    <tr>                                                        <!-- starting line-->
+                    <tr id="starting-row">                                                        <!-- starting line-->
                         <th class="starting" scope="row">Starting Line</th>
                         <td class="starting" id="start-2" data-label="3">2</td>
                         <td class="starting" id="start-3" data-label="5">3</td>
@@ -349,17 +365,13 @@
                     </tr>
                 </tbody>
             </table>
-        <p><button class="Roll Dice" onclick="rollDice()">Roll Dice</button></p>
-        <ul>
-            <li><p>DICE #1:</p><div id="dice1"></div></li>
-            <li><p>DICE #2:</p><div id="dice2"></div></li>
-            <li><p>Money in the pot:</p><div id="money"></div></li>
-            <li><p>Announcement:</p><div id="announcement1"></div></li>
-            <li><p>Announcement:</p><div id="announcement2"></div></li>
-            <li><p>Announcement:</p><div id="announcement3"></div></li>
-        </ul>
-        </p>
+            </div>
       </section>
+    </section>
+</div>
+    <section class="right">
+
+    </section>
   </main>
   <footer>
     <script src="./assets/js/HorseGame.js"></script>
