@@ -34,29 +34,52 @@ const getDomainInfo = () => {
       })
 };
 
-// Asynchronous functions
-const shortenUrl = () => {
+// OLD
+// const shortenUrl = () => {
+//     const urlToShorten = inputField.value;
+//     const data = JSON.stringify({destination: urlToShorten, domain: {id: domainId, ref: domainApi}});
+//     console.log(data);
+//       fetch(url, {
+//       method: 'POST',
+//       headers: {
+//         'Content-type': 'application/json',
+//         'apikey': apiKey
+//       },
+//       body: data
+//     }).then(response =>{
+//       if(response.ok){
+//         return response.json();
+//       }
+//       throw new Error('Request failed!');
+//     }, networkError => {
+//       console.log(networkError.message);
+//     }).then(jsonResponse => {
+//       renderResponse(jsonResponse);
+//     })
+//   }
+
+  const shortenUrl = async () => {
     const urlToShorten = inputField.value;
-    const data = JSON.stringify({destination: urlToShorten, domain: {id: domainId, ref: domainApi}});
-    console.log(data);
-      fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-        'apikey': apiKey
-      },
-      body: data
-    }).then(response =>{
+    const data = JSON.stringify({destination: urlToShorten});
+    try {
+      const response = await fetch(url,{
+          method: 'POST',
+          body: data,
+          headers: {
+            'Content-type': 'application/json',
+            'apikey': apiKey
+                    }
+        }
+    ); 
       if(response.ok){
-        return response.json();
+        const jsonResponse = await response.json();
+        renderResponse(jsonResponse);
       }
-      throw new Error('Request failed!');
-    }, networkError => {
-      console.log(networkError.message);
-    }).then(jsonResponse => {
-      renderResponse(jsonResponse);
-    })
+    } catch (error) {
+      console.log(error);
+    }
   }
+
 
 // Clear page and call Asynchronous functions
 const displayShortUrl = (event) => {

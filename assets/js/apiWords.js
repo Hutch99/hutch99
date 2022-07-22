@@ -5,31 +5,43 @@ const url = 'https://api.datamuse.com/words?sl=';
 const inputField = document.querySelector('#input');
 const submit = document.querySelector('#submit');
 const responseField = document.querySelector('#responseField');
-const consoleLog = false;
 
-// AJAX function
+
+// // OLD FUNCTION
+// const getSuggestions = () => {
+//   const wordQuery = inputField.value;
+//   const endpoint = url + wordQuery;
+//   fetch(endpoint,{cache: 'no-cache'})
+//   .then(response => {
+//     if(response.ok){
+//         let returnedContent = response.json();
+//       return returnedContent;
+//     }
+//     throw new Error('Request failed!');
+//   },(networkError) =>{
+//     console.log(networkError.message);
+//   })
+//   .then(jsonResponse => {
+//     renderResponse(jsonResponse);
+//   })
+// }
+
 const getSuggestions = () => {
-    consoleLog ? console.log('running get suggestion') : false;  //debug
   const wordQuery = inputField.value;
-    consoleLog ? console.log(wordQuery) : false ; //debug
   const endpoint = url + wordQuery;
-    consoleLog ? console.log(endpoint) : false ; //debug
-  fetch(endpoint,{cache: 'no-cache'})
-  .then(response => {
-    consoleLog ? console.log(response.ok) : false ; //debug
+  try{
+    const response = await fetch(endpoint,{cache: 'no-cache'}); 
     if(response.ok){
-        let returnedContent = response.json();
-        consoleLog ? console.log(returnedContent) : false ; //debug
-      return returnedContent;
-    }
+      const returnedContent = await response.json();
+      renderResponse(returnedContent);
+  }
+  }catch(error){
+    console.log(error);
+  }
     throw new Error('Request failed!');
-  },(networkError) =>{
-    console.log(networkError.message);
-  })
-  .then(jsonResponse => {
-    renderResponse(jsonResponse);
-  })
-}
+  }
+
+
 
 // Clears previous results and display results to webpage
 const displaySuggestions = (event) => {
