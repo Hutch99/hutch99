@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -9,28 +8,37 @@ class Contact extends React.Component {
       authorized: false
     };
     this.authorize = this.authorize.bind(this);
+    this.logout = this.authorize.bind(this);
   }
 
   authorize(e) {
     const password = e.target.querySelector(
       'input[type="password"]').value;
-    const auth = password == this.state.password;
+    const auth = password === this.state.password;
     this.setState({
       authorized: auth
     });
   }
 
+  logout() {
+    this.setState({
+      authorized: false });
+  }
+
   render() {
     const login = (<form action ="#" onSubmit={ this.authorize }><input type="password" plaseholder="password"/><input type="submit" /></form>);
     const contactInfo = (
-      <ul>
+      <div>      
+        <ul>
           <li>
-            client@example.com
+            hutch@hutchresources.com
           </li>
           <li>
-            555.555.5555
+            602-740-3656
           </li>
         </ul>
+        <button action ="#" onClick={ this.logout } value="Logout" >Logout</button>
+      </div>
     );
     return (
       <div id="authorization">
@@ -41,7 +49,4 @@ class Contact extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Contact />, 
-  document.getElementById('app')
-);
+export default Contact;
