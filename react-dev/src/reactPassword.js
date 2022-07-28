@@ -8,7 +8,7 @@ class Contact extends React.Component {
       authorized: false
     };
     this.authorize = this.authorize.bind(this);
-    this.logout = this.authorize.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   authorize(e) {
@@ -26,7 +26,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const login = (<form action ="#" onSubmit={ this.authorize }><input type="password" plaseholder="password"/><input type="submit" /></form>);
+    const login = (<form action ="#" onSubmit={ this.authorize }><input type="password" plaseholder="password"/><input type="submit" />  Its definatly not "swordfish".</form>);
     const contactInfo = (
       <div>      
         <ul>
